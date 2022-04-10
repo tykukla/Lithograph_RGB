@@ -12,13 +12,13 @@ There are many variations of similar projects on the web. A recent one (at time 
 
 
 ## Single-Panel version -- How it works
-Here, a lithograph is separated from a backplate using stand-offs and neodymium magnets. The magnets allow for some adjustment and also make it possible to remove the backplate and prop the lithograph up on a stand-off or two by itself for natural light use. The backplate has a Neopixel RGB LED strip (**WS2812B**) facing the lithograph and a rotary encoder, on/off switch, and microcontroller on the other side. I made no effort to hide the wires here. Instead I tried to keep the wiring neat because I like how it looks (...at least when I can keep the wiring neat, which you may find is rarely).
+Here, a lithograph is separated from a backplate using stand-offs and neodymium magnets. The magnets allow for some adjustment and also make it possible to remove/change the backplate and prop the lithograph up on a stand-off or two by itself for natural light use. The backplate has a Neopixel RGB LED strip (**WS2812B**) facing the lithograph and a rotary encoder, on/off switch, and microcontroller on the other side. I made no effort to hide the wires here. I tried to keep the wiring neat because I like how it looks (...but I still mostly failed to keep it neat).
 
 The rotary encoder cycles through HSV (hue, saturation, value) colors. Pressing the rotary encoder cycles between each. 
 
 
 ## Multi-Panel version -- How it works
-This is an Andy Warhol-inspired lithograph project. Each panel has an RGB LED strip behind it that displays a given color, and each panel's color is selected randomly upon pressing a push-button. Holding the push-button for three seconds changes the mode to randomly display new colors after some amount of time (60 seconds in my code). Holding for three seconds again returns to the mode where the same random colors persist indefinitely. To prevent displaying colors that are too similar, the colors are selected by a function that randomly imposes some minimum distance between the hue of any two colors (brightness (or value) and saturation are the same for all colors). 
+This is an Andy Warhol-inspired lithograph project. Each panel has an RGB LED strip behind it that displays a given color, and each panel's color is selected randomly by pressing a push-button. Holding the push-button for three seconds changes the mode to randomly display new colors after some amount of time (60 seconds between color shifts in the current code). Holding for three seconds again returns to the mode where the same random colors persist indefinitely. To prevent displaying colors that are too similar, the colors are selected by a function that randomly imposes some minimum distance between the hue of any two colors (brightness (or value) and saturation are the same for all colors). 
 
 The basic construction is very similar to the single-panel version, although the backplate has sub-divisions that separate the light for each panel. 
 
