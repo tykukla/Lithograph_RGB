@@ -15,13 +15,13 @@ import adafruit_fancyled.adafruit_fancyled as fancy
 
 
 # set button for encoder
-button = digitalio.DigitalInOut(board.D12)
+button = digitalio.DigitalInOut(board.GP20)
 button.direction = digitalio.Direction.INPUT
 button.pull = digitalio.Pull.UP
 button_state = None  # tracks the state of the button so that one press is only one press
 button_switch = 1 # sets whether to move in columns or rows thru color matrices (False is across columns (single row))
 
-pixel_pin = board.A1
+pixel_pin = board.GP17
 num_pixels = 6
 
 pixels = neopixel.NeoPixel(pixel_pin, num_pixels, brightness=0.2, auto_write=False)
@@ -101,7 +101,7 @@ newValue = thisValue
 thisCol = fancy.CHSV(thisHue, thisSat, thisValue)
 ## ========================================= ## 
 
-encoder = rotaryio.IncrementalEncoder(board.D10, board.D9)
+encoder = rotaryio.IncrementalEncoder(board.GP18, board.GP19)
 last_position = encoder.position
 turn_dir = 1   # plus one or minus one, necessary for moving up and down a single column of matrix
 
